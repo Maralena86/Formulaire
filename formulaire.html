@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Formulaire</title>
+</head>
+<body>
+	<h1>Test 1</h1>
+	<form method="post" action="traitement.php">
+		
+		<h2>Zones de saisie basiques:</h2>
+			<!--Le for sert à lier le label à la zone de text(pour la manipuler avec PHP ou autre après)-->
+		<p>
+			<label for="pseudo">Votre pseudo: </label><input type="text" name="pseudo" id="pseudo" placeholder="Ex: mari8626" size="30" maxlength="8" autofocus required />
+			<br/>
+			<label for="pass">Votre mot de passe: </label>
+			<input type="password" name="pass" id="pass" maxlength="8" placeholder="8 charactères"/><br/><br/>
+			<label for=commentaires>Laissez votre commentaire pour donner votre avis de notre site. </label><br>
+			<textarea name="commentaires" id="commentaires" rows="10" cols="50">Commentaires et sugestions pour l'amélioration du site.. </textarea>
+		</p>
+	</form>
+	<h1>Test 2</h1>
+	<h2>Les zones de saisie enrichies</h2>
+	<form method="post" action="traitement.php">
+
+		<fieldset>
+			<legend>Vos informations: </legend>
+			<div>
+				<label for="prenom">Votre prénom: </label><br>
+				<input type="text" name="prénom" id="prénom" required />
+			</div>
+
+			<div>
+				<label for="nom">Votre nom: </label><br>
+				<input type="text" name="nom" id="nom" required />
+			</div>
+
+
+			<div>
+				<label for= "email">Votre mail: </label><br>
+				<input type="email" name="email" required />
+			</div>
+
+			<div>
+				<label for="url">Votre page web: </label><br>
+				<input type="url" name="url"/>
+			</div>
+
+			<div>
+				<label for="tel">Votre telephone: </label><br>
+				<input type="tel" name="tel"/>
+			</div>
+
+			<div>
+				<label for="number">Saisir un numero: </label><br>
+				<input type="number" name="number" placeholder="2021" min= "1910" max="2003" />
+			</div>
+
+			<div>
+				<label for="date">Date de naissance: </label><br>
+				<input type="date" name="date"/>
+			</div>
+
+			<div>
+				<label for="color">La plus belle couleur pour toi: </label><br>
+				<input type="color" name="color"/>
+			</div>
+
+			<label for="search">Cherche: </label><br>
+			<input type="search" name="search"/>
+			</div>
+		</fieldset>
+		   <fieldset>
+       <legend>Votre niveau: </legend> <!-- Titre du fieldset -->
+ 
+       <p>
+           Quelle est votre niveau? <br>
+
+           <input type="radio" name="niveau" value="débutant" id="débutant" /> <label for="debutant">Débutant</label><br>
+           <input type="radio" name="niveau" value="ntermediare" id="ntermediare" /> <label for="intermediare">Intermédiaire</label><br>
+           <input type="radio" name="niveau" value="confirmé" id="confirmé" /> <label for="confirmé">Confirmé</label><br>
+           <input type="radio" name="niveau" value="autre" id="autre" /> <label for="autre">Autre...</label>
+       </p>
+ 
+       <p>
+           <label for="precisions">Si "Autre", veuillez préciser :</label><br>
+           <textarea name="precisions" id="precisions" cols="40" rows="4"></textarea>
+       </p>
+   </fieldset>
+	</form>
+	<h1>Test 3</h1>
+	<form method="post" action="traitement.php">
+		<h2>Les éléments d'options</h2>
+		<h3>Les cases à cocher</h3>
+		<p>
+			Quels instruments vous jouez? 
+		</p>
+		<p>
+			<input type="checkbox" name="violin" id="violin"/><label for="violin">Violon</label><br/>
+			<input type="checkbox" name="piano" id="piano" checked /><label for="piano">Piano</label></br>
+			<input type="checkbox" name="guitar" id="guitar" checked/><label for="guitar">Guitar</label><br>
+			<input type="checkbox" name="cello" id="cello"/><label for="cello">Cello</label><br>
+			<input type="checkbox" name="saxo" id="saxo"/><label for="saxo">Saxo</label>
+		</p>
+		<h3>Les zones d'options</h3>
+		<p>
+			Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+			<input type="radio" name="age" value="moins18" id="moins18"/><label for="moins18">Moins 18 ans(Ne boire pas d'alcohol)</label><br>
+			<input type="radio" name="age" value="medium18-25" id="medium18-25"/><label for="medium18-25">De 18 à 25. La jeunesse</label><br>
+			<input type="radio" id="medium25-36" name="age" value="medium25-36"/><label for="medium25-36">De 25 à 36. Est ce que ça va?</label><br>
+			<input type="radio" name="age" value="medium36-45" id="medium36-45"/><label for="medium36-45">De 36 à 45. T'inquiètes pas</label>
+		</p>
+		<p>
+	       Sur quel continent habitez-vous ?<br />
+	       <input type="radio" name="continent" value="europe" id="europe" /> <label for="europe">Europe</label><br />
+	       <input type="radio" name="continent" value="afrique" id="afrique" /> <label for="afrique">Afrique</label><br />
+	       <input type="radio" name="continent" value="asie" id="asie" /> <label for="asie">Asie</label><br />
+	       <input type="radio" name="continent" value="amerique" id="amerique" /> <label for="amerique">Amérique</label><br />
+	       <input type="radio" name="continent" value="australie" id="australie" /> <label for="australie">Australie</label>
+	   </p>
+	   <h3>Les listes déroulantes</h3>
+	   <p>
+		   	<label for="pays">Dans quel pays habitez-vous ?</label><br />
+	       <select name="pays" id="pays">
+	           <option value="france">France</option>
+	           <option value="espagne">Espagne</option>
+	           <option value="italie">Italie</option>
+	           <option value="royaume-uni">Royaume-Uni</option>
+	           <option value="colombie">Colombie</option>
+	           <option value="etats-unis">États-Unis</option>
+	           <option value="chine">Chine</option>
+	           <option value="japon">Japon</option>
+	       </select>
+	      </p>
+	       <input type="submit" value="envoyer">	
+	   
+	</form>
+
+
+</body>
+</html>

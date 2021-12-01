@@ -1,0 +1,51 @@
+body
+{
+	background-color: white;
+	color:black;
+	align-items: center;
+	justify-content: center;
+	padding-left: 30px;
+}
+h1
+{
+	color: white;
+	background-color: #0C2C51;
+	width: 70%;
+	box-shadow: 6px 6px 6px black;
+	text-shadow: 5px 5px 5px black;
+	padding-left: 10px ;
+}
+h2
+{
+	color: #066688;
+}
+
+label
+{
+	font-weight: bold;
+	margin: 5px;
+}
+div 
+{
+	margin: 5px;
+	text-align: justify;
+
+}
+textarea
+{
+	background-color: #1DB4AF;
+}
+:required
+{
+	background-color: rgb(6, 102, 136, 0.5);
+}
+@media screen and (max-width: 1024px)
+{
+    p
+    {
+    
+        background-color: rgb(6, 102, 136, 0.3);
+        font-size: 1.2em;
+    }
+}
+
